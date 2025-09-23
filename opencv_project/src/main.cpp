@@ -83,29 +83,33 @@ int main() {
     }
     imwrite("resources/3_4_contour_areas.jpg", area_image);
     
-    // 5. 提取高亮区域并进行图形学处理
+// 5. 提取高亮区域并进行图形学处理
     Mat bright_gray;
     cvtColor(original, bright_gray, COLOR_BGR2GRAY);
-    
+    imwrite("resources/3_5_1.jpg", bright_gray);
+
     // 二值化提取高亮区域
     Mat binary;
     threshold(bright_gray, binary, 100, 255, THRESH_BINARY);
-    
+    imwrite("resources/3_5_2.jpg", binary);
+
     // 膨胀
     Mat dilated;
     Mat kernel = getStructuringElement(MORPH_RECT, Size(5, 5));
     dilate(binary, dilated, kernel);
-    
+    imwrite("resources/3_5_3.jpg", dilated);
+
     // 腐蚀
     Mat eroded;
     erode(dilated, eroded, kernel);
-    
+    imwrite("resources/3_5_4.jpg", eroded);
+
     // 漫水处理
     Mat floodfilled = eroded.clone();
     floodFill(floodfilled, Point(0, 0), Scalar(128));
-    
+    imwrite("resources/3_5_5.jpg", floodfilled);
+
     imwrite("resources/3_5_bright_processed.jpg", floodfilled);
-    
     // ===================== 四、图像绘制 =====================
     
     // 1. 绘制任意圆形方形和文字

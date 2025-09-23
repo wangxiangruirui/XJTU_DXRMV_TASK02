@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/wxr/Documents/opencv_project/build",
+  "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/opencv_project.dir/src/main.cpp.o -c /home/wxr/Documents/opencv_project/src/main.cpp",
+  "file": "/home/wxr/Documents/opencv_project/src/main.cpp"
+}
+]

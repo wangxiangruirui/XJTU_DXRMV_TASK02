@@ -35,3 +35,28 @@
 ##### 顶帽运算	cv2.morphologyEx()	原图减去开运算结果。	提取比背景亮的细小物体。
 ##### 黑帽运算	cv2.morphologyEx()	闭运算结果减去原图。	提取比背景暗的细小物体。
 
+## 目录结构与文件说明
+- src/
+  - main.cpp：项目主程序，读取资源图像并生成处理结果。
+- resources/
+  - test_image.png：输入测试图像。
+  - 运行后生成的输出图片：
+    - 1_1_gray.jpg：灰度图
+    - 1_2_hsv.jpg：HSV 图
+    - 2_1_mean_filter.jpg：均值滤波结果
+    - 2_2_gaussian_filter.jpg：高斯滤波结果
+    - 3_1_red_region.jpg：红色区域提取结果
+    - 3_2_red_contours.jpg：红色外轮廓叠加到原图
+    - 3_3_red_bounding_box.jpg：红色区域外接矩形叠加到原图
+    - 3_4_contour_areas.jpg：在图上标注轮廓面积
+    - 3_5_1.jpg：高亮区域处理步骤1（转灰度）
+    - 3_5_2.jpg：步骤2（二值化）
+    - 3_5_3.jpg：步骤3（膨胀）
+    - 3_5_4.jpg：步骤4（腐蚀）
+    - 3_5_5.jpg：步骤5（漫水填充）
+    - 3_5_bright_processed.jpg：高亮区域最终处理结果（与 3_5_5 相同）
+    - 4_1_shapes_text.jpg：绘制形状与文字
+    - 4_2_red_contours_only.jpg：仅绘制红色外轮廓
+    - 4_3_red_bbox_only.jpg：仅绘制红色外接框
+    - 5_1_rotated_35.jpg：旋转 35 度
+    - 5_2_cropped_quarter.jpg：左上角四分之一裁剪
